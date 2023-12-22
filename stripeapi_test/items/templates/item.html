@@ -1,0 +1,43 @@
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Item</title>
+</head>
+<body>
+
+<section>
+    <div class="item">
+        <div class="description">
+            <h3>Название: {{ item.name }}</h3>
+            <h4>Описание: {{ item.description }}</h4>
+            <h5>Цена: ${{ item.price }}</h5>
+        </div>
+    </div>
+    <button type="button" id="buy-button">Buy</button>
+</section>
+
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Item</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <div class="item">
+        <div class="description">
+            <h3>Название: {{ item.name }}</h3>
+            <h4>Описание: {{ item.description }}</h4>
+            <h5>Цена: ${{ item.price }}</h5>
+        </div>
+      </div>
+      <form action="/buy/" method="POST">
+        <button type="submit" id="checkout-button">Buy</button>
+      </form>
+    </section>
+  </body>
+</html>

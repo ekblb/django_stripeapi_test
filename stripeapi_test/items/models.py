@@ -1,6 +1,7 @@
-from django.db import models
 from django.core import validators
-from item.constants import MAX_LENGTH_ITEM, MIN_VALUE_PRICE, MAX_VALUE_PRICE
+from django.db import models
+
+from items.constants import (MAX_LENGTH_ITEM, MAX_VALUE_PRICE, MIN_VALUE_PRICE)
 
 
 class Item(models.Model):
